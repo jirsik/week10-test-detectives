@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Detective;
+use App\Crime;
+use Auth; 
 
 class DetectiveController extends Controller
 {
@@ -20,7 +22,7 @@ class DetectiveController extends Controller
 
     public function show($detective_slug)
     {
-        $detective = \App\Detective::where('slug', $detective_slug)->first();
+        $detective = Detective::where('slug', $detective_slug)->first();
 
         if (!$detective) {
             abort(404, 'Detective not found');
@@ -29,5 +31,17 @@ class DetectiveController extends Controller
         $view = view('detective/show');
         $view->detective = $detective;
         return $view;
+    }
+
+    public function hire(Request $request, $detective_id)
+    {
+        $crime = Crime::create([
+            'detective_id' => $detective_id,
+            // 'user_id' => Auth::user()->id,
+            'subject' => $request->input('subject'),
+            'description' => $request->input('description'),
+        ]);
+        
+        return redirect('/detective')->with('success', 'Detective hired!');
     }
 }

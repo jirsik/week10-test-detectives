@@ -27,7 +27,8 @@
     <section class="detective-assign">
         <h2>Hire a detective</h2>
 
-        <form action="" method="post">
+    <form action="{{action('DetectiveController@hire', $detective->id)}}" method="post">
+        @csrf
 
             <input type="text" name="subject" placeholder="What crime has been commited?">
 
