@@ -19,4 +19,7 @@ Route::get('/detective', 'DetectiveController@index');
 Route::get('/detective/{slug}', 'DetectiveController@show');
 Route::post('/detective/{id}', 'DetectiveController@hire');
 
+Route::get('/detective/api/{slug}', 'DetectiveController@api');
+
+
 Auth::routes();

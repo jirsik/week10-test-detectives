@@ -10,6 +10,16 @@ use Auth;
 class DetectiveController extends Controller
 {
     //
+    public function api($detective_slug)
+    {
+        $detective = Detective::where('slug', $detective_slug)->with('images')->first();
+
+        if (!$detective) {
+            abort(404, 'Detective not found');
+        }
+        return $detective;
+    }
+
     public function index()
     {
 //         n the index method of the DetectiveController, use Eloquent to select all detectives in the database, ordered by their names in ascending order.
