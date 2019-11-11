@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Detective;
 
 class DetectiveController extends Controller
 {
     //
     public function index()
     {
-        return view('detective/index');
+//         n the index method of the DetectiveController, use Eloquent to select all detectives in the database, ordered by their names in ascending order.
+
+// Then give the result to the view.
+
+        $detectives = Detective::orderBy('name', 'ASC')->get();
+        return view('detective/index', compact('detectives'));
     }
 
     public function show($detective_slug)
