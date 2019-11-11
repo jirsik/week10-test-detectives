@@ -15,4 +15,7 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/detective', 'DetectiveController@index');
+Route::get('/detective/{slug}', 'DetectiveController@show');
+
 Auth::routes();
