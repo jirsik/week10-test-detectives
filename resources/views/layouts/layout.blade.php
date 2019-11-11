@@ -6,6 +6,8 @@
     <title>World Class Detectives</title>
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
     
     {{-- load the stylesheet --}}
 </head>

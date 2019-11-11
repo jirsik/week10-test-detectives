@@ -1,0 +1,189 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
+}
+
+body {
+  background-color: #fdd7b7;
+  color: #7c3403;
+  min-height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Crimson Text', serif;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25em 0;
+}
+
+a {
+  color: #7c3403;
+  text-decoration: none;
+}
+
+nav.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav.menu a {
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+nav.menu a:hover {
+  background-color: #7c3403;
+  color: #ffffff;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-home {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-home img {
+  width: 12em;
+  margin-bottom: 1em;
+}
+
+.page-home h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.page-home a.report {
+  display: block;
+  padding: 0.5em 1em;
+  margin: 2em;
+  border: 1px solid #7c3403;
+  border-radius: 0.5em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.page-home a.report:hover {
+  background-color: #7c3403;
+  color: #ffffff;
+}
+
+.page-home .detectives {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.page-home .detectives a {
+  width: 5em;
+  height: 5em;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-home .detectives a img {
+  position: absolute;
+  top: -0.25em;
+  left: 0;
+  width: 100%;
+}
+
+.page-detective .info .portrait {
+  float: left;
+  margin: 0 1em 1em 0;
+  width: 10em;
+}
+
+.page-detective .info h1 {
+  font-size: 3em;
+  margin: 0 0 0.25em 0;
+}
+
+.page-detective .service {
+  margin-top: 1em;
+}
+
+.detective-assign {
+  margin-top: 1em;
+}
+
+.detective-assign form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.detective-assign form input[type="text"],
+.detective-assign form textarea {
+  font-family: 'Architects Daughter', cursive;
+  border-width: 0;
+  padding: 0.5em 0.5em;
+  border-radius: 0.25em;
+  background-color: #7c3403;
+  color: #ffffff;
+  margin: 0.5em 0;
+  min-width: 400px;
+}
+
+.detective-assign form input[type="submit"] {
+  font-family: 'Architects Daughter', cursive;
+  border-width: 0;
+  padding: 0.5em 0.5em;
+  border-radius: 0.25em;
+  background-color: #500c0c;
+  color: #ffffff;
+}
+
