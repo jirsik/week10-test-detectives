@@ -13,6 +13,6 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Auth::routes();
